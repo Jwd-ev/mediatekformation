@@ -1,6 +1,7 @@
 {% extends "basefront.html.twig" %}
 {% block body %}
     <table class="table table-striped">
+        <caption> Tableau des formations disponibles </caption>
         <thead>
             <tr>
                 <th class="text-left align-top" scope="col">
@@ -22,7 +23,7 @@
                     <a href="{{ path('formations.sort', {table:'playlist', champ:'name', ordre:'DESC'}) }}" class="btn btn-info btn-sm active" role="button" aria-pressed="true">></a>
                     <form class="form-inline mt-1" method="POST" action="{{ path('formations.findallcontain', {champ:'name', table:'playlist'}) }}">
                         <div class="form-group mr-1 mb-2">
-                            <input type="text" class="sm" name="recherche" 
+                            <input type="text" class="sm" name="recherche"
                                    value="{% if valeur|default and table|default and table=='playlist' %}{{ valeur }}{% endif %}">
                             <input type="hidden" name="_token" value="{{ csrf_token('filtre_name') }}">
                             <button type="submit" class="btn btn-info mb-2 btn-sm">filtrer</button>
@@ -77,7 +78,7 @@
                     <td class="text-center">
                         {% if formation.miniature %}
                             <a href="{{ path('formations.showone', {id:formation.id}) }}">
-                                <img src="{{ formation.miniature }}">
+                                <img src="{{ formation.miniature }}" alt="Image miniature d'une formation">
                             </a>
                         {% endif %}
                     </td>
