@@ -86,7 +86,7 @@ class PlaylistsController extends AbstractController {
             'playlists' => $playlists,
             'categories' => $categories            
         ]);
-    }         
+    }
     
     /**
      * Récupère les enregistrements selon le $champ et la $valeur
@@ -129,6 +129,4 @@ class PlaylistsController extends AbstractController {
             'playlistformations' => $playlistFormations
         ]);        
     }       
-    
 }
-
