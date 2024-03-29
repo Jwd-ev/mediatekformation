@@ -14,9 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 /**
- * Builder permettant de définir les champs du formulaire d'ajout ou d'édition
- * d'une formation
- * @author samsam
+ * Builder permettant de définir les champs du formulaire d'ajout ou d'édition d'une formation
  */
 class FormationType extends AbstractType {
     

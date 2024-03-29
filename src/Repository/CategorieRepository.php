@@ -53,6 +53,20 @@ class CategorieRepository extends ServiceEntityRepository
                 ->orderBy('c.name', 'ASC')   
                 ->getQuery()
                 ->getResult();        
-    }    
-
+    }
+    
+    /**
+     * Enregistrements dont un champ est égal à une valeur
+     * ou tous les enregistrements si la valeur est vide
+     * @param type $name
+     * @return Categorie[]
+     */
+    public function findAllEqual($name) : array {
+            return $this->createQueryBuilder('c') // alias de la table
+                    ->select('c.name name')
+                    ->where('c.name=:name')
+                    ->setParameter('name', $name)
+                    ->getQuery()
+                    ->getResult();
+    }
 }
