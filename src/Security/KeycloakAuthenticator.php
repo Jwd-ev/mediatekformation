@@ -20,8 +20,6 @@ use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface
 
 /**
  * Gère l'authentification
- *
- * @author samsam
  */
 class KeycloakAuthenticator extends OAuth2Authenticator implements AuthenticationEntryPointInterface {
     

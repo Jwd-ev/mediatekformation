@@ -12,8 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Gère les routes de la page d'administration des catégories
- *
- * @author samsam
  */
 class AdminCategoriesController extends AbstractController {
     

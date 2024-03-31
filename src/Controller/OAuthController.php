@@ -10,8 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Gère les routes liées à l'authentification
- *
- * @author samsam
  */
 class OAuthController extends AbstractController
 {

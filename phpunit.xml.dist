@@ -32,6 +32,11 @@
     <listeners>
         <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
     </listeners>
+    
+    
+    <rallonges>​​
+        < classe d'extension  = " DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension " />
+    </rallonges>
 
     <!-- Run `composer require symfony/panther` before enabling this extension -->
     <!--
