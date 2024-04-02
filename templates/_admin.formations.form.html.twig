@@ -1,26 +1,25 @@
 {{ form_start(formformation) }}
-    <div class="row">
-            <div class="col">             
-                <div class="row">
-                    <div class="col-auto">
-                        {{ form_row(formformation.title) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(formformation.description) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(formformation.publishedAt) }}                                                  
-                    </div>
-                    <div class="col">
-                        {{ form_row(formformation.playlist) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(formformation.categories) }}
-                    </div>  
-                    <div class="col">
-                        {{ form_row(formformation.submit) }}
-                    </div>  
-                </div>
-            </div>
+    <div class="form-group">
+        {{ form_label(formformation.title, 'Titre') }}
+        {{ form_widget(formformation.title, {'attr': {'class': 'form-control', 'placeholder': 'Entrez le titre'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(formformation.description, 'Description') }}
+        {{ form_widget(formformation.description, {'attr': {'class': 'form-control', 'rows': '4', 'placeholder': 'Entrez la description'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(formformation.publishedAt, 'Date de publication') }}
+        {{ form_widget(formformation.publishedAt, {'attr': {'class': 'form-control', 'placeholder': 'YYYY-MM-DD'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(formformation.playlist, 'Playlist') }}
+        {{ form_widget(formformation.playlist, {'attr': {'class': 'form-control', 'placeholder': 'Entrez le lien de la playlist'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(formformation.categories, 'Catégories') }}
+        {{ form_widget(formformation.categories, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="text-center">
+        {{ form_widget(formformation.submit, {'attr': {'class': 'btn btn-primary'}}) }}
     </div>
 {{ form_end(formformation) }}

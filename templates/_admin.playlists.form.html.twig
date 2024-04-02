@@ -1,21 +1,33 @@
 {{ form_start(formplaylist) }}
-    <div class="row">
-            <div class="col">             
-                <div class="row">
-                    <div class="col-auto">
-                        {{ form_row(formplaylist.name) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(formplaylist.description) }}
-                    </div>
-                    <div class="col">
-                        {{ form_row(formplaylist.formations) }}
-                    </div>
-
-                    <div class="col">
-                        {{ form_row(formplaylist.submit) }}
-                    </div>  
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    {{ form_label(formplaylist.name, 'Nom de la playlist') }}
+                    {{ form_widget(formplaylist.name, {'attr': {'class': 'form-control', 'placeholder': 'Entrez le nom de la playlist'}}) }}
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    {{ form_label(formplaylist.description, 'Description') }}
+                    {{ form_widget(formplaylist.description, {'attr': {'class': 'form-control', 'rows': '4', 'placeholder': 'Entrez la description de la playlist'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    {{ form_label(formplaylist.formations, 'Formations') }}
+                    {{ form_widget(formplaylist.formations, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                {{ form_widget(formplaylist.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+            </div>
+        </div>
     </div>
 {{ form_end(formplaylist) }}
